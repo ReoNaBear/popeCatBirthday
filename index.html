@@ -7,295 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ㄅㄆㄇ生日快樂</title>
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  <style>
-    #envelope {
-      position: absolute;
-      width: 420px;
-      height: 270px;
-      border-bottom-left-radius: 9px;
-      border-bottom-right-radius: 9px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: #00334c;
-      box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
-    }
-    
-    .front {
-      position: absolute;
-      width: 0;
-      height: 0;
-      z-index: 3;
-    }
-    
-    .flap {
-      border-left: 210px solid transparent;
-      border-right: 210px solid transparent;
-      border-bottom: 123px solid transparent;
-      /* a little smaller */
-      border-top: 147px solid #00334c;
-      /* a little larger */
-      transform-origin: top;
-      pointer-events: none;
-    }
-    
-    .pocket {
-      border-left: 210px solid #0077b2;
-      border-right: 210px solid #0077b2;
-      border-bottom: 135px solid #006da3;
-      border-top: 135px solid transparent;
-      border-bottom-left-radius: 9px;
-      border-bottom-right-radius: 9px;
-    }
-    
-    .letter {
-      color: #fff;
-      position: absolute;
-      background-color: #fff;
-      width: 80%;
-      margin-left: auto;
-      margin-right: auto;
-      height: 80%;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      border-radius: 9px;
-      box-shadow: 0 3px 39px rgba(0, 0, 0, 0.12);
-    }
-    
-    .letter:after {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 25%, rgba(215, 227, 239, 0.7) 55%, #d7e3ef 100%);
-    }
-    
-    .open .flap {
-      transform: rotateX(180deg);
-      transition: transform 0.4s ease, z-index 0.6s;
-      z-index: 1;
-    }
-    
-    .open .letter {
-      top: -40%;
-      z-index: 2;
-      transition: top 3.4s 2.6s ease, z-index 0.6s;
-    }
-    
-    .open .letter.top {
-      z-index: 10;
-      top: 40%;
-      transition: top 2s;
-    }
-    
-    .open .letter.top.full {
-      width: 220%;
-      height: 220%;
-      transition: width 2s, height 2s;
-    }
-    
-    .open .letter.top.full.word {
-      color: black;
-      transition: color 2s;
-    }
-    
-    .full:before {
-      background-color: #eeeff0;
-      width: 10000%;
-      height: 10000%;
-      position: absolute;
-    }
-    
-    .hearts {
-      position: absolute;
-      top: 135px;
-      left: 0;
-      right: 0;
-      z-index: 2;
-    }
-    
-    .heart {
-      position: absolute;
-      bottom: 0;
-      right: 10%;
-      pointer-events: none;
-    }
-    
-    .heart:before,
-    .heart:after {
-      position: absolute;
-      content: "";
-      left: 75px;
-      top: 0;
-      width: 75px;
-      height: 120px;
-      background: #d00000;
-      border-radius: 75px 75px 0 0;
-      transform: rotate(-45deg);
-      transform-origin: 0 100%;
-      pointer-events: none;
-    }
-    
-    .heart:after {
-      left: 0;
-      transform: rotate(45deg);
-      transform-origin: 100% 100%;
-    }
-    
-    .a1 {
-      left: 20%;
-      transform: scale(0.6);
-      opacity: 1;
-      -webkit-animation: slideUp 4s linear 1, sideSway 2s ease-in-out 4 alternate;
-      -moz-animation: slideUp 4s linear 1, sideSway 2s ease-in-out 4 alternate;
-      -webkit-animation-fill-mode: forwards;
-      animation-fill-mode: forwards;
-      -webkit-animation-delay: 0.7s;
-      animation-delay: 0.7s;
-    }
-    
-    .a2 {
-      left: 55%;
-      transform: scale(1);
-      opacity: 1;
-      -webkit-animation: slideUp 5s linear 1, sideSway 4s ease-in-out 2 alternate;
-      -moz-animation: slideUp 5s linear 1, sideSway 4s ease-in-out 2 alternate;
-      -webkit-animation-fill-mode: forwards;
-      animation-fill-mode: forwards;
-      -webkit-animation-delay: 0.7s;
-      animation-delay: 0.7s;
-    }
-    
-    .a3 {
-      left: 10%;
-      transform: scale(0.8);
-      opacity: 1;
-      -webkit-animation: slideUp 7s linear 1, sideSway 2s ease-in-out 6 alternate;
-      -moz-animation: slideUp 7s linear 1, sideSway 2s ease-in-out 6 alternate;
-      -webkit-animation-fill-mode: forwards;
-      animation-fill-mode: forwards;
-      -webkit-animation-delay: 0.7s;
-      animation-delay: 0.7s;
-    }
-    
-    @-webkit-keyframes slideUp {
-      0% {
-        top: 0;
-      }
-      100% {
-        top: -800px;
-      }
-    }
-    
-    @keyframes slideUp {
-      0% {
-        top: 0;
-      }
-      100% {
-        top: -800px;
-      }
-    }
-    
-    @-webkit-keyframes sideSway {
-      0% {
-        margin-left: 0px;
-      }
-      100% {
-        margin-left: 50px;
-      }
-    }
-    
-    @keyframes sideSway {
-      0% {
-        margin-left: 0px;
-      }
-      100% {
-        margin-left: 50px;
-      }
-    }
-    
-    body {
-      margin: 0px;
-    }
-    
-    .container {
-      background-color: #a8e2ff;
-      position: relative;
-      width: 100%;
-      height: 100vh;
-    }
-    
-    .envlope-wrapper {
-      width: 100%;
-    }
-    
-    .filter {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0%;
-      left: 0%;
-      background-color: #a8e2ff;
-    }
-    /* Google font */
-    
-    @import url("https://fonts.googleapis.com/css?family=Dancing+Script");
-    .paper {
-      width: 100%;
-      height: 80%;
-      position: relative;
-      margin: 20px auto;
-      padding-top: 40px;
-      padding-bottom: 40px;
-      background-color: white;
-      box-shadow: 0px 0px 5px 0px #888;
-    }
-    /* styling red vertical line */
-    
-    .paper::before {
-      content: "";
-      width: 2px;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 40px;
-      background-color: rgba(255, 0, 0, 0.6);
-    }
-    /* styling blue horizontal lines */
-    
-    .pattern {
-      height: 100%;
-      background-image: repeating-linear-gradient(white 0px, white 24px, teal 25px);
-    }
-    /* styling text content */
-    
-    .content {
-      padding-top: 6px;
-      padding-left: 56px;
-      padding-right: 16px;
-      line-height: 25px;
-      font-family: "Dancing Script", cursive;
-      font-size: 19px;
-      letter-spacing: 1px;
-      word-spacing: 5px;
-    }
-    
-    .swiper {
-      height: 100%;
-    }
-    
-    .swiper-button-next,
-    .swiper-button-prev {
-      display: none;
-    }
-    
-    .show {
-      display: block;
-    }
-  </style>
+  <link rel="stylesheet" href="./index.css">
 </head>
 
 <body>
@@ -313,10 +25,8 @@
                 <div class="paper">
                   <div class="pattern">
                     <div class="content">
-                      Dear Diary
-                      <br/><br/>Here are some of the sweetest memories I made during the last summer trip to Canada. What's even more beautiful about it was that it was the first time the entire family got together to spend quality time with each other.
-                      The part I enjoyed the most was the road trips with my cousins whom I met after years. Hugo and Julia made the best cupcakes I've ever had. Didn't know that they would grow up so fast. Being with them is fun. I wish to spend more
-                      such time with them in future too.
+                      Day 1
+                      <br/><br/>今天你過的好嗎
                       </br>
                       </br>The sight of Niagara Falls was quite tantalizing. We also got a chance to see a rainbow there which looked soo arresting. We captured the most beautiful views there walking down the Clifton Hill.
                     </div>
@@ -366,8 +76,6 @@
                 </div>
               </div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
           </div>
         </div>
         <div class="hearts">
@@ -381,22 +89,13 @@
 </body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<!-- Swiper JS -->
+
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-<!-- Initialize Swiper -->
 <script>
   var swiper = new Swiper(".mySwiper", {
     spaceBetween: 30,
     effect: "cards",
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
   });
 </script>
 <script>
@@ -423,8 +122,6 @@
       }
       if (letterCount === 4) {
         e.target.classList.add('word')
-        nextBtn.classList.add('show')
-        prevBtn.classList.add('show')
       }
 
     }

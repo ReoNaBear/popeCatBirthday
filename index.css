@@ -1,0 +1,286 @@
+#envelope {
+  cursor: pointer;
+  position: absolute;
+  width: 21.875vw;
+  height: 14.0625vw;
+  border-bottom-left-radius: 0.46875vw;
+  border-bottom-right-radius: 0.46875vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #00334c;
+  box-shadow: 0 0.3125vw 1.5625vw rgba(0, 0, 0, 0.2);
+}
+
+.front {
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: 3;
+}
+
+.flap {
+  border-left: 10.9375vw solid transparent;
+  border-right: 10.9375vw solid transparent;
+  border-bottom: 6.40625vw solid transparent;
+  /* a little smaller */
+  border-top: 7.65265vw solid #00334c;
+  /* a little larger */
+  transform-origin: top;
+  pointer-events: none;
+}
+
+.pocket {
+  border-left: 10.9375vw solid #0077b2;
+  border-right: 10.9375vw solid #0077b2;
+  border-bottom: 7.03125vw solid #006da3;
+  border-top: 7.03125vw solid transparent;
+  border-bottom-left-radius: 0.46875vw;
+  border-bottom-right-radius: 0.46875vw;
+}
+
+.letter {
+  color: #fff;
+  position: absolute;
+  background-color: #fff;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 0.46875vw;
+  box-shadow: 0 0.15625vw 2.03125vw rgba(0, 0, 0, 0.12);
+}
+
+.letter:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 25%, rgba(215, 227, 239, 0.7) 55%, #d7e3ef 100%);
+}
+
+.open .flap {
+  transform: rotateX(180deg);
+  transition: transform 0.4s ease, z-index 0.6s;
+  z-index: 1;
+}
+
+.open .letter {
+  top: -30%;
+  z-index: 2;
+  transition: top 3.4s 2.6s ease, z-index 0.6s;
+}
+
+.open .letter.top {
+  z-index: 10;
+  top: 50%;
+  transition: top 2s;
+}
+
+.open .letter.top.full {
+  width: 220%;
+  height: 220%;
+  transition: width 2s, height 2s;
+}
+
+.open .letter.top.full.word {
+  color: black;
+  transition: color 2s;
+}
+
+.hearts {
+  position: absolute;
+  top: 7.03125vw;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.heart {
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  pointer-events: none;
+}
+
+.heart:before,
+.heart:after {
+  position: absolute;
+  content: "";
+  left: 3.90625vw;
+  top: 0;
+  width: 3.90625vw;
+  height: 6.25vw;
+  background: #d00000;
+  border-radius: 3.90625vw 3.90625vw 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+  pointer-events: none;
+}
+
+.heart:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+.a1 {
+  left: 20%;
+  transform: scale(0.6);
+  opacity: 1;
+  -webkit-animation: slideUp 4s linear 1, sideSway 2s ease-in-out 4 alternate;
+  -moz-animation: slideUp 4s linear 1, sideSway 2s ease-in-out 4 alternate;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+
+.a2 {
+  left: 55%;
+  transform: scale(1);
+  opacity: 1;
+  -webkit-animation: slideUp 5s linear 1, sideSway 4s ease-in-out 2 alternate;
+  -moz-animation: slideUp 5s linear 1, sideSway 4s ease-in-out 2 alternate;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+
+.a3 {
+  left: 10%;
+  transform: scale(0.8);
+  opacity: 1;
+  -webkit-animation: slideUp 7s linear 1, sideSway 2s ease-in-out 6 alternate;
+  -moz-animation: slideUp 7s linear 1, sideSway 2s ease-in-out 6 alternate;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+
+@-webkit-keyframes slideUp {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -41.667vw;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -41.667vw;
+  }
+}
+
+@-webkit-keyframes sideSway {
+  0% {
+    margin-left: 0vw;
+  }
+  100% {
+    margin-left: 2.60417vw;
+  }
+}
+
+@keyframes sideSway {
+  0% {
+    margin-left: 0vw;
+  }
+  100% {
+    margin-left: 2.60417vw;
+  }
+}
+
+body {
+  margin: 0vw;
+  overflow: hidden;
+}
+
+.container {
+  background-color: #a8e2ff;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.envlope-wrapper {
+  width: 100%;
+}
+
+.filter {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  background-color: #a8e2ff;
+}
+
+
+/* Google font */
+
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script");
+.paper {
+  width: 100%;
+  height: 80%;
+  position: relative;
+  margin: 1.042vw auto;
+  padding-top: 2.084vw;
+  padding-bottom: 2.084vw;
+  background-color: white;
+  box-shadow: 0vw 0vw 0.2605vw 0vw #888;
+}
+
+
+/* styling red vertical line */
+
+.paper::before {
+  content: "";
+  width: 0.1042vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 2.084vw;
+  background-color: rgba(255, 0, 0, 0.6);
+}
+
+
+/* styling blue horizontal lines */
+
+.pattern {
+  height: 100%;
+  background-image: repeating-linear-gradient(white 0vw, white 1.25vw, teal 1.3021vw);
+}
+
+
+/* styling text content */
+
+.content {
+  font-family: "NSimSun", "FangSong", Arial, serif;
+  padding-top: 0.3125vw;
+  padding-left: 2.917vw;
+  padding-right: 0.8333vw;
+  line-height: 1.3021vw;
+  font-family: "Dancing Script", cursive;
+  font-size: 0.99vw;
+  letter-spacing: 1px;
+  word-spacing: 0.2604vw;
+}
+
+.swiper {
+  height: 100%;
+}
+
+.swiper-slide {
+  cursor: grab;
+}

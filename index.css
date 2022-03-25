@@ -73,19 +73,19 @@
 .open .letter {
   top: -30%;
   z-index: 2;
-  transition: top 3.4s 2.6s ease, z-index 0.6s;
+  transition: top 2.4s 2.6s ease, z-index 0.6s;
 }
 
 .open .letter.top {
   z-index: 10;
   top: 50%;
-  transition: top 2s;
+  transition: top 1.5s;
 }
 
 .open .letter.top.full {
   width: 220%;
   height: 220%;
-  transition: width 2s, height 2s;
+  transition: width 1.5s, height 1.5s;
 }
 
 .open .letter.top.full.word {
@@ -139,6 +139,7 @@
   animation-fill-mode: forwards;
   -webkit-animation-delay: 0.7s;
   animation-delay: 0.7s;
+  animation-iteration-count: infinite;
 }
 
 .a2 {
@@ -151,6 +152,7 @@
   animation-fill-mode: forwards;
   -webkit-animation-delay: 0.7s;
   animation-delay: 0.7s;
+  animation-iteration-count: infinite;
 }
 
 .a3 {
@@ -163,6 +165,7 @@
   animation-fill-mode: forwards;
   -webkit-animation-delay: 0.7s;
   animation-delay: 0.7s;
+  animation-iteration-count: infinite;
 }
 
 @-webkit-keyframes slideUp {

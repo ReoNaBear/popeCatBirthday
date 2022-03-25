@@ -24,16 +24,16 @@
   border-right: 10.9375vw solid transparent;
   border-bottom: 6.40625vw solid transparent;
   /* a little smaller */
-  border-top: 7.65265vw solid #00334c;
+  border-top: 7.65265vw solid #8ea7f7;
   /* a little larger */
   transform-origin: top;
   pointer-events: none;
 }
 
 .pocket {
-  border-left: 10.9375vw solid #0077b2;
-  border-right: 10.9375vw solid #0077b2;
-  border-bottom: 7.03125vw solid #006da3;
+  border-left: 10.9375vw solid #467cdf;
+  border-right: 10.9375vw solid #467cdf;
+  border-bottom: 7.03125vw solid #355ca5;
   border-top: 7.03125vw solid transparent;
   border-bottom-left-radius: 0.46875vw;
   border-bottom-right-radius: 0.46875vw;
@@ -143,7 +143,7 @@
 }
 
 .a2 {
-  left: 55%;
+  left: 50%;
   transform: scale(1);
   opacity: 1;
   -webkit-animation: slideUp 5s linear 1, sideSway 4s ease-in-out 2 alternate;
@@ -210,7 +210,7 @@ body {
 }
 
 .container {
-  background-color: #a8e2ff;
+  background-color: #8bcdf5;
   position: relative;
   width: 100%;
   height: 100vh;
@@ -226,7 +226,7 @@ body {
   height: 100%;
   top: 0%;
   left: 0%;
-  background-color: #a8e2ff;
+  background-color: #8bcdf5;
 }
 
 

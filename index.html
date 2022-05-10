@@ -8,6 +8,43 @@
   <title>卯咪生日快樂</title>
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="index.css">
+  <style>
+    .lock {
+      width: 150px;
+      height: 150px;
+      background-image: url(./lock.png);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 55%;
+      right: 15%;
+    }
+
+    .angel {
+      width: 150px;
+      height: 150px;
+      background-image: url(./angel.png);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 55%;
+      right: 15%;
+    }
+
+    .universe {
+      width: 150px;
+      height: 150px;
+      background-image: url(./universe.png);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 55%;
+      right: 15%;
+    }
+  </style>
 </head>
 
 <body>
@@ -27,7 +64,7 @@
                   <div class="pattern">
                     <div class="content">
                       5/5
-                      <br/><br/> 今天剛好是世界密碼日， 目的在維護大家密碼的安全，
+                      <br /><br /> 今天剛好是世界密碼日， 目的在維護大家密碼的安全，
                       </br>但是根據中桃園的最新研究指出，
                       </br>有一款最新型的密碼 - "1i qj3al 94t m6"，能夠解開世界上數一數二難解開的帳戶
                       </br>她能夠輕易地入侵每個人的Heart Account
@@ -46,6 +83,7 @@
                     </div>
                   </div>
                 </div>
+                <div class="lock"></div>
               </div>
               <!-- 5/6 -->
               <div class="swiper-slide">
@@ -53,7 +91,7 @@
                   <div class="pattern">
                     <div class="content">
                       5/6
-                      <br/><br/>在2001年的這個時候
+                      <br /><br />在2001年的這個時候
                       </br>第一位前往太空旅行的遊客返回了地球
                       </br>縱使宇宙的一切都如此驚人
                       </br>最後還是會回歸地球的懷抱
@@ -72,6 +110,7 @@
                     </div>
                   </div>
                 </div>
+                <div class="universe"></div>
               </div>
               <!-- 5/7 -->
               <div class="swiper-slide">
@@ -79,7 +118,7 @@
                   <div class="pattern">
                     <div class="content">
                       5/7
-                      <br/><br/>在快200年前，一部作品震驚了維也納
+                      <br /><br />在快200年前，一部作品震驚了維也納
                       </br>也徹底影響了全世界
                       </br>那就是貝多芬的第9號交響曲
                       </br>第4樂章中加入了人聲
@@ -98,6 +137,7 @@
                     </div>
                   </div>
                 </div>
+                <div class="angel"></div>
               </div>
               <!-- 5/8 -->
               <div class="swiper-slide">
@@ -105,7 +145,7 @@
                   <div class="pattern">
                     <div class="content">
                       5/8
-                      <br/><br/>
+                      <br /><br />
                       </br>
                       </br>
                       </br>
@@ -130,7 +170,7 @@
                   <div class="pattern">
                     <div class="content">
                       5/9 防暈小卡
-                      <br/><br/>
+                      <br /><br />
                       </br>
                       </br>
                       </br>
@@ -155,7 +195,7 @@
                   <div class="pattern">
                     <div class="content">
                       5/10
-                      <br/><br/>
+                      <br /><br />
                       </br>
                       </br>
                       </br>
@@ -180,7 +220,7 @@
                   <div class="pattern">
                     <div class="content">
                       5/11
-                      <br/><br/>
+                      <br /><br />
                       </br>
                       </br>
                       </br>
@@ -205,7 +245,7 @@
                   <div class="pattern">
                     <div class="content">
                       5/12
-                      <br/><br/>
+                      <br /><br />
                       </br>
                       </br>
                       </br>
@@ -230,7 +270,7 @@
                   <div class="pattern">
                     <div class="content">
                       5/13
-                      <br/><br/>
+                      <br /><br />
                       </br>
                       </br>
                       </br>
@@ -255,7 +295,7 @@
                   <div class="pattern">
                     <div class="content">
                       5/14
-                      <br/><br/>
+                      <br /><br />
                       </br>
                       </br>
                       </br>
@@ -306,7 +346,7 @@
   let envelope = document.querySelector('#envelope')
   let nextBtn = document.querySelector('.swiper-button-next')
   let prevBtn = document.querySelector('.swiper-button-prev')
-  envelope.addEventListener('click', function() {
+  envelope.addEventListener('click', function () {
     envelope.classList.add('open')
     envelope.classList.remove('close')
   })
@@ -398,7 +438,7 @@
         y: Math.floor(Math.random() * app.renderer.height)
       },
       ease: Power4.easeOut,
-      onComplete: function() {
+      onComplete: function () {
         popParticle();
       }
     }, 1);
@@ -414,7 +454,7 @@
     }
 
     // MOUSE EVENTS
-    particleSprite.mouseover = function() {
+    particleSprite.mouseover = function () {
       // TweenMax.to(particleSprite, 0.3, {pixi:{x:0, y:0}}, 0);
       popParticle();
       popCounter++

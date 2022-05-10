@@ -211,6 +211,10 @@ body {
 
 .container {
   background-color: #8bcdf5;
+  /* background-image: url('./—Pngtree—desktop\ wood\ wood\ texture_1429805.jpg'); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   position: relative;
   width: 100%;
   height: 100vh;
@@ -226,7 +230,6 @@ body {
   height: 100%;
   top: 0%;
   left: 0%;
-  background-color: #8bcdf5;
 }
 
 

@@ -8,6 +8,30 @@
   <title>卯咪生日快樂</title>
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="index.css">
+  <style>
+    .bear-logo {
+      width: 18.223vw;
+      height: 18.223vw;
+      background-image: url(./polar-bear.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 3;
+    }
+    
+    .logo {
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      text-align: center;
+      font-size: 1.5625vw;
+    }
+  </style>
 </head>
 
 <body>
@@ -21,6 +45,15 @@
         <div class="letter">
           <div class=" swiper mySwiper">
             <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="start">
+                  <div class="bear-logo"></div>
+                  <div class="logo" style=" ">
+                    熊熊超壞說:
+                    </br>看下去就對惹
+                  </div>
+                </div>
+              </div>
               <!-- 5/5 -->
               <div class="swiper-slide">
                 <div class="paper">
@@ -294,7 +327,7 @@
                 </div>
               </div>
               <div class="swiper-slide">
-                <div class="gift">
+                <div class="end gift">
                 </div>
               </div>
             </div>
@@ -451,14 +484,6 @@
         }
       }, 0);
     }
-
-    // MOUSE EVENTS
-    // particleSprite.mouseover = function() {
-    //   // TweenMax.to(particleSprite, 0.3, {pixi:{x:0, y:0}}, 0);
-    //   popParticle();
-    //   popCounter++
-    // }
-
     // ADD SPRITE TO STAGE
     app.stage.addChild(particleSprite);
   }

@@ -304,3 +304,100 @@ body {
 .swiper-slide {
   cursor: grab;
 }
+
+.normal-shape {
+  width: 7.8125vw;
+  height: 7.8125vw;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 55%;
+  right: 15%;
+}
+
+.lock {
+  background-image: url(./lock.png);
+}
+
+.angel {
+  background-image: url(./angel.png);
+}
+
+.universe {
+  background-image: url(./universe.png);
+}
+
+.smile {
+  background-image: url(./smile.png);
+}
+
+.amulet {
+  background-image: url(./胖丁打醒卡.png);
+  height: 25vw;
+  width: 9.375vw;
+  top: 9.5%;
+}
+
+.heart-icon {
+  background-image: url(./heart.png);
+  opacity: 1;
+}
+
+.rain {
+  background-image: url(./rain.png);
+}
+
+.sketch {
+  background-image: url(./sketch.png);
+}
+
+.wish {
+  background-image: url(./wish.png);
+}
+
+.disable-word {
+  color: white;
+  transition: color 3s;
+}
+
+.disable-image {
+  opacity: 0;
+  transition: opacity 3s;
+}
+
+.display-none {
+  display: none;
+}
+
+.password {
+  width: 15.625vw;
+  border: aliceblue;
+  background-color: bisque;
+  border-radius: 1.046vw;
+  text-align: center;
+}
+
+.change-btn {
+  border-radius: 1.3021vw;
+  border: black;
+  font-size: 0.521vw;
+  line-height: 1.5625vw;
+}
+
+.result-word {
+  transition: color 3s;
+}
+
+.gift {
+  width: 100%;
+  height: 80%;
+  margin: 1.042vw auto;
+  padding-top: 2.084vw;
+  padding-bottom: 2.084vw;
+  box-shadow: 0vw 0vw 0.2605vw 0vw #888;
+  background-image: url(./gift.jpg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}

@@ -96,7 +96,7 @@
                       </br>繞了一圈
                       </br>即便還有很多令人好奇的台
                       </br>最後還是回到這裡
-                      </br>跟妳一起搞耍
+                      </br>跟妳一起玩樂
                       </br>
                       </br>妳就跟地球一樣
                       </br>多變但溫和
@@ -147,6 +147,7 @@
                       </br>世界或許不是那麼完美
                       </br>或許會遇到許多苦難
                       </br>很多的挫折
+                      </br>正因為如此
                       </br>所以我遇到妳們的時候會給妳們
                       </br>一個充滿活力的微笑
                       </br>
@@ -212,7 +213,7 @@
                       </br>
                       <div class="result disable-word" style="padding-top: 10px;"></div>
                       </br>
-                      <div class="disable-word result-word">怎麼就這樣被妳發現惹 (w´ω｀w)</div>
+                      <div class="result-word" style="color: white;">怎麼就這樣被妳發現惹 (w´ω｀w)</div>
                     </div>
                   </div>
                 </div>
@@ -393,13 +394,15 @@
   let resultWord = document.querySelector('.result-word')
 
   btn.addEventListener('click', function() {
+    let answer = "卯咪我喜歡你"
     let str = input.value.toString()
-    let word = unescape(str.replace(/\\u/g, '%u'))
+    let word = unescape(str.replace(/\\u/g, '%u')).toString()
     result.innerText = `轉換結果=> ${word}`
     result.classList.remove('disable-word')
-    if (word === "卯咪我喜歡妳") {
+    if (word == "卯咪我喜歡妳" || word == "我喜歡妳" || word == "喜歡妳" || word == answer) {
+      console.log('aaaaaaa');
       heartIcon.classList.remove('disable-image')
-      resultWord.classList.remove('disable-word')
+      resultWord.style.color = "black"
     }
   })
 </script>

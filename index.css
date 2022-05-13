@@ -30,6 +30,20 @@
   pointer-events: none;
 }
 
+.bear-letter {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  z-index: 4;
+  background-image: url(./bear-toy.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: 28%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .pocket {
   border-left: 10.9375vw solid #467cdf;
   border-right: 10.9375vw solid #467cdf;

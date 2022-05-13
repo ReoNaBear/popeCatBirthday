@@ -40,7 +40,7 @@
       background-image: url(./胖丁打醒卡.png);
       height: 25vw;
       width: 9.375vw;
-      top: 6.5%;
+      top: 9.5%;
     }
     
     .heart-icon {
@@ -52,6 +52,10 @@
       background-image: url(./rain.png);
     }
     
+    .sketch {
+      background-image: url(./sketch.png);
+    }
+    
     .disable-word {
       color: white;
       transition: color 3s;
@@ -60,6 +64,10 @@
     .disable-image {
       opacity: 0;
       transition: opacity 3s;
+    }
+    
+    .display-none {
+      display: none;
     }
     
     .password {
@@ -89,6 +97,7 @@
     <div class="filter"></div>
     <div class="envlope-wrapper">
       <div id="envelope" class="close">
+        <div class="bear-letter"></div>
         <div class="front flap"></div>
         <div class="front pocket"></div>
         <div class="letter">
@@ -291,25 +300,26 @@
                   <div class="pattern">
                     <div class="content">
                       5/12
-                      <br /><br />
+                      <br /><br />今天來講一下作畫的整個過程好了
+                      </br>邊看著妳邊思考著
+                      </br>卯咪，藍色，夜的元素
                       </br>
+                      </br>幻想在一個帶點星星的夜
+                      </br>我看著妳
+                      </br>妳看著我
+                      </br>時間就像靜止了
                       </br>
+                      </br>有顆星星調皮的滑過妳的臉頰
+                      </br>但不影響妳美麗的容顏
                       </br>
-                      </br>
-                      </br>
-                      </br>
-                      </br>
-                      </br>
-                      </br>
-                      </br>
-                      </br>
-                      </br>
-                      </br>
-                      </br>
+                      </br>什麼? 妳說什麼畫?
+                      </br>妳等等就知道惹
+                      </br>: 28 :
                       </br>
                     </div>
                   </div>
                 </div>
+                <div class="sketch normal-shape"></div>
               </div>
               <div class="swiper-slide">
                 <div class="paper">
@@ -392,7 +402,9 @@
   let envelope = document.querySelector('#envelope')
   let nextBtn = document.querySelector('.swiper-button-next')
   let prevBtn = document.querySelector('.swiper-button-prev')
+  let bearToy = document.querySelector('.bear-letter')
   envelope.addEventListener('click', function() {
+    bearToy.classList.add('display-none')
     envelope.classList.add('open')
     envelope.classList.remove('close')
   })
